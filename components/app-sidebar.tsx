@@ -6,10 +6,8 @@ import { BarChart3, Database, Home, LogOut, MessageSquare, Settings, Shield, Use
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -17,13 +15,9 @@ import {
   SidebarSeparator,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { Button } from "@/components/ui/button"
-import { useAuth } from "@/components/auth-provider"
-import { ModeToggle } from "@/components/mode-toggle"
 
 export function AppSidebar() {
   const pathname = usePathname()
-  const { user, signOut } = useAuth()
 
   return (
     <Sidebar collapsible="icon">
@@ -39,7 +33,6 @@ export function AppSidebar() {
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
@@ -80,50 +73,7 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
-        <SidebarSeparator />
-
-        <SidebarGroup>
-          <SidebarGroupLabel>Account</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={pathname === "/profile"} tooltip="Profile">
-                  <Link href="/profile">
-                    <User2 />
-                    <span>Profile</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={pathname === "/settings"} tooltip="Settings">
-                  <Link href="/settings">
-                    <Settings />
-                    <span>Settings</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
       </SidebarContent>
-
-      <SidebarFooter className="p-4">
-        <div className="flex items-center justify-between">
-          <ModeToggle />
-          {user ? (
-            <Button variant="ghost" size="icon" onClick={signOut}>
-              <LogOut className="h-5 w-5" />
-              <span className="sr-only">Sign out</span>
-            </Button>
-          ) : (
-            <Button asChild variant="outline" size="sm">
-              <Link href="/auth/signin">Sign In</Link>
-            </Button>
-          )}
-        </div>
-      </SidebarFooter>
     </Sidebar>
   )
 }

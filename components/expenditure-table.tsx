@@ -21,7 +21,7 @@ const expenditures: Expenditure[] = [
     id: "EXP-001",
     department: "Education",
     project: "School Renovation Program",
-    amount: 4500000,
+    amount: 45000000,
     date: "2023-08-15",
     status: "In Progress",
   },
@@ -29,7 +29,7 @@ const expenditures: Expenditure[] = [
     id: "EXP-002",
     department: "Healthcare",
     project: "Medical Equipment Purchase",
-    amount: 2800000,
+    amount: 28000000,
     date: "2023-07-22",
     status: "Completed",
   },
@@ -37,7 +37,7 @@ const expenditures: Expenditure[] = [
     id: "EXP-003",
     department: "Infrastructure",
     project: "Highway Expansion",
-    amount: 12000000,
+    amount: 120000000,
     date: "2023-09-05",
     status: "In Progress",
   },
@@ -45,7 +45,7 @@ const expenditures: Expenditure[] = [
     id: "EXP-004",
     department: "Defense",
     project: "Security System Upgrade",
-    amount: 3500000,
+    amount: 35000000,
     date: "2023-06-30",
     status: "Completed",
   },
@@ -53,7 +53,7 @@ const expenditures: Expenditure[] = [
     id: "EXP-005",
     department: "Social Services",
     project: "Community Support Program",
-    amount: 1800000,
+    amount: 18000000,
     date: "2023-10-12",
     status: "Planned",
   },
@@ -61,7 +61,7 @@ const expenditures: Expenditure[] = [
     id: "EXP-006",
     department: "Technology",
     project: "Digital Transformation Initiative",
-    amount: 5200000,
+    amount: 52000000,
     date: "2023-11-01",
     status: "Planned",
   },
@@ -69,7 +69,7 @@ const expenditures: Expenditure[] = [
     id: "EXP-007",
     department: "Environment",
     project: "Renewable Energy Project",
-    amount: 7500000,
+    amount: 75000000,
     date: "2023-08-28",
     status: "In Progress",
   },
@@ -126,7 +126,7 @@ export function ExpenditureTable() {
               <TableHead>ID</TableHead>
               <TableHead>Department</TableHead>
               <TableHead>Project</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead className="text-right">Amount (₹)</TableHead>
               <TableHead>Date</TableHead>
               <TableHead>Status</TableHead>
             </TableRow>
@@ -137,7 +137,7 @@ export function ExpenditureTable() {
                 <TableCell className="font-medium">{exp.id}</TableCell>
                 <TableCell>{exp.department}</TableCell>
                 <TableCell>{exp.project}</TableCell>
-                <TableCell className="text-right">${exp.amount.toLocaleString()}</TableCell>
+                <TableCell className="text-right">₹{exp.amount.toLocaleString("en-IN")}</TableCell>
                 <TableCell>{new Date(exp.date).toLocaleDateString()}</TableCell>
                 <TableCell>
                   <StatusBadge status={exp.status} />
@@ -174,4 +174,3 @@ function StatusBadge({ status }: { status: Expenditure["status"] }) {
 
   return <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusStyles()}`}>{status}</span>
 }
-

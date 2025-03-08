@@ -1,37 +1,37 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ProjectsMap } from "@/components/projects-map"
-import { ProjectsTable } from "@/components/projects-table"
-import { ProjectsTimeline } from "@/components/projects-timeline"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ProjectsMap } from "@/components/projects-map";
+import { ProjectsTable } from "@/components/projects-table";
+import { ProjectsTimeline } from "@/components/projects-timeline";
 
 export default function ProjectsPage() {
   return (
     <div className="container py-8 space-y-8">
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">Public Project Tracking</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Government Schemes & Project Tracker</h1>
         <p className="text-muted-foreground">
-          Interactive dashboards to monitor public policies and projects with detailed analytics.
+          Track and analyze major government initiatives and infrastructure projects across India.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <StatCard title="Active Projects" value="42" description="Across 8 departments" />
-        <StatCard title="Total Budget Allocated" value="$328.5M" description="For current fiscal year" />
-        <StatCard title="Completion Rate" value="76%" description="Projects completed on time" />
+        <StatCard title="Ongoing Projects" value="128" description="Across 20+ ministries" />
+        <StatCard title="Total Budget Allocated" value="₹2,500 Cr" description="For current fiscal year" />
+        <StatCard title="Completion Rate" value="68%" description="Projects completed as per schedule" />
       </div>
 
       <Tabs defaultValue="map" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="map">Geographic View</TabsTrigger>
-          <TabsTrigger value="list">Project List</TabsTrigger>
-          <TabsTrigger value="timeline">Timeline View</TabsTrigger>
+          <TabsTrigger value="map">State-wise Implementation</TabsTrigger>
+          <TabsTrigger value="list">Government Initiatives</TabsTrigger>
+          <TabsTrigger value="timeline">Project Timeline</TabsTrigger>
         </TabsList>
 
         <TabsContent value="map" className="space-y-4">
           <Card>
             <CardHeader>
               <CardTitle>Project Locations</CardTitle>
-              <CardDescription>Geographic distribution of public projects across the region.</CardDescription>
+              <CardDescription>State and district-wise distribution of government schemes.</CardDescription>
             </CardHeader>
             <CardContent className="h-[500px] p-0">
               <ProjectsMap />
@@ -42,8 +42,8 @@ export default function ProjectsPage() {
         <TabsContent value="list" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Project Directory</CardTitle>
-              <CardDescription>Comprehensive list of all public projects with status and details.</CardDescription>
+              <CardTitle>Government Initiatives</CardTitle>
+              <CardDescription>List of schemes like Smart Cities Mission, PMAY, Jal Jeevan Mission.</CardDescription>
             </CardHeader>
             <CardContent>
               <ProjectsTable />
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
           <Card>
             <CardHeader>
               <CardTitle>Project Timeline</CardTitle>
-              <CardDescription>Chronological view of project milestones and progress.</CardDescription>
+              <CardDescription>Milestones and progress updates for government projects.</CardDescription>
             </CardHeader>
             <CardContent>
               <ProjectsTimeline />
@@ -64,7 +64,7 @@ export default function ProjectsPage() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
 
 function StatCard({ title, value, description }: { title: string; value: string; description: string }) {
@@ -78,6 +78,5 @@ function StatCard({ title, value, description }: { title: string; value: string;
         <p className="text-xs text-muted-foreground mt-1">{description}</p>
       </CardContent>
     </Card>
-  )
+  );
 }
-

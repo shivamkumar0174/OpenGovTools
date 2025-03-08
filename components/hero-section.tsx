@@ -29,9 +29,9 @@ export function HeroSection() {
         <div className="w-full max-w-4xl mt-12 relative">
           <div className="aspect-video rounded-lg overflow-hidden border shadow-xl">
             <img
-              src="/placeholder.svg?height=720&width=1280"
+              src="/budget.jpg"
               alt="OpenGovTools Dashboard Preview"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-center"
             />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-4 py-2 rounded-md shadow-lg">

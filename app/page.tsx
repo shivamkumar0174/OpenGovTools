@@ -19,7 +19,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
           <FeatureCard
             icon={<Database className="h-10 w-10 text-primary" />}
             title="Government Data Access"
@@ -41,12 +41,6 @@ export default function Home() {
             href="/chat"
           />
 
-          <FeatureCard
-            icon={<Shield className="h-10 w-10 text-primary" />}
-            title="Secure Authentication"
-            description="OAuth 2.0 authentication ensures secure access while protecting user privacy and data."
-            href="/auth/signin"
-          />
         </div>
       </section>
 
@@ -90,10 +84,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg">
-              <Link href="/auth/signup">Get Started</Link>
+              <Link href="/data">Get Started</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/demo">View Demo</Link>
+              <Link href="/">View Demo</Link>
             </Button>
           </div>
         </div>
