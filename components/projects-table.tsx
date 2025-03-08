@@ -169,7 +169,7 @@ export function ProjectsTable() {
                 </TableCell>
                 <TableCell>{project.department}</TableCell>
                 <TableCell>{project.location}</TableCell>
-                <TableCell className="text-right">${project.budget.toLocaleString()}</TableCell>
+                <TableCell className="text-right">₹{project.budget.toLocaleString()}</TableCell>
                 <TableCell>
                   <div className="text-xs">
                     {new Date(project.startDate).toLocaleDateString()} -{new Date(project.endDate).toLocaleDateString()}

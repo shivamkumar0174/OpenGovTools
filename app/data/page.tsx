@@ -26,7 +26,7 @@ export default function DataPage() {
             <CardHeader>
               <CardTitle>Annual Budget Allocation</CardTitle>
               <CardDescription>
-                Breakdown of government budget allocation by department for the current fiscal year.
+                Breakdown of government budget allocation by ministry for the current financial year.
               </CardDescription>
             </CardHeader>
             <CardContent className="h-[400px]">
@@ -35,9 +35,9 @@ export default function DataPage() {
           </Card>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <StatCard title="Total Budget" value="$1.2B" description="Fiscal Year 2023-2024" />
-            <StatCard title="Largest Allocation" value="Education" description="28% of total budget" />
-            <StatCard title="Budget Growth" value="+3.2%" description="Compared to previous year" />
+            <StatCard title="Total Budget" value="₹45 Lakh Crore" description="Union Budget 2024-2025" />
+            <StatCard title="Largest Allocation" value="Defence" description="₹6 Lakh Crore (Approx 13%)" />
+            <StatCard title="GDP Growth" value="+6.3%" description="Projected for FY 2024-25" />
           </div>
         </TabsContent>
 
@@ -82,4 +82,3 @@ function StatCard({ title, value, description }: { title: string; value: string;
     </Card>
   )
 }
-

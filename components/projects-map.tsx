@@ -17,26 +17,24 @@ export function ProjectsMap() {
     )
   }
 
-  // This is a placeholder for a real map component
-  // In a real application, you would use a mapping library like Mapbox, Leaflet, or Google Maps
   return (
     <div className="w-full h-full bg-slate-100 dark:bg-slate-800 relative">
       <img
-        src="/placeholder.svg?height=500&width=1000"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/India-map-en.svg/514px-India-map-en.svg.png?20240819195922"
         alt="Map of project locations"
         className="w-full h-full object-cover"
       />
 
       {/* Simulated map markers */}
-      <div className="absolute top-1/4 left-1/3 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
+      <div className="absolute top-1/4 left-1/4 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
         8
       </div>
 
-      <div className="absolute top-1/2 left-1/2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
+      <div className="absolute top-1/4 left-1/2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
         12
       </div>
 
-      <div className="absolute bottom-1/3 right-1/4 w-5 h-5 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
+      <div className="absolute bottom-1/3 right-1/2 w-5 h-5 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
         6
       </div>
 

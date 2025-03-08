@@ -23,140 +23,50 @@ type TimelineProject = {
 const timelineProjects: TimelineProject[] = [
   {
     id: "PRJ-001",
-    name: "Central Park Renovation",
-    department: "Parks & Recreation",
-    startDate: "2023-03-15",
-    endDate: "2024-06-30",
+    name: "Mumbai Metro Expansion",
+    department: "Urban Development",
+    startDate: "2023-04-01",
+    endDate: "2025-12-31",
     status: "On Track",
     milestones: [
-      {
-        date: "2023-03-15",
-        title: "Project Kickoff",
-        description: "Initial planning and resource allocation",
-        completed: true,
-      },
-      {
-        date: "2023-05-20",
-        title: "Design Approval",
-        description: "Final designs approved by city council",
-        completed: true,
-      },
-      {
-        date: "2023-08-10",
-        title: "Phase 1 Construction",
-        description: "Playground and walking paths renovation",
-        completed: true,
-      },
-      {
-        date: "2023-12-05",
-        title: "Phase 2 Construction",
-        description: "Lake area and botanical gardens renovation",
-        completed: false,
-      },
-      {
-        date: "2024-03-15",
-        title: "Phase 3 Construction",
-        description: "Amphitheater and event spaces renovation",
-        completed: false,
-      },
-      {
-        date: "2024-06-30",
-        title: "Project Completion",
-        description: "Final inspections and grand reopening",
-        completed: false,
-      },
+      { date: "2023-04-01", title: "Project Approval", description: "Government approval and funding allocation", completed: true },
+      { date: "2023-07-15", title: "Land Acquisition", description: "Land cleared for metro stations", completed: true },
+      { date: "2024-01-10", title: "Phase 1 Construction", description: "Initial track laying and station framework", completed: false },
+      { date: "2024-09-30", title: "Rolling Stock Arrival", description: "Metro trains imported and tested", completed: false },
+      { date: "2025-06-15", title: "Final Testing", description: "Safety tests and trial runs", completed: false },
+      { date: "2025-12-31", title: "Project Completion", description: "Metro line inauguration", completed: false },
     ],
   },
   {
-    id: "PRJ-004",
-    name: "Smart Traffic System Implementation",
-    department: "Transportation",
-    startDate: "2023-06-20",
-    endDate: "2025-01-31",
+    id: "PRJ-002",
+    name: "Smart Traffic Management - Delhi",
+    department: "Transport & Traffic Control",
+    startDate: "2023-06-10",
+    endDate: "2026-03-31",
     status: "On Track",
     milestones: [
-      {
-        date: "2023-06-20",
-        title: "Project Initiation",
-        description: "Contract signing and initial planning",
-        completed: true,
-      },
-      {
-        date: "2023-08-15",
-        title: "Infrastructure Assessment",
-        description: "Evaluation of existing traffic infrastructure",
-        completed: true,
-      },
-      {
-        date: "2023-11-10",
-        title: "Phase 1 Installation",
-        description: "Smart traffic lights in downtown area",
-        completed: false,
-      },
-      {
-        date: "2024-04-25",
-        title: "Phase 2 Installation",
-        description: "Expansion to major arterial roads",
-        completed: false,
-      },
-      {
-        date: "2024-09-15",
-        title: "System Integration",
-        description: "Integration with emergency services and public transit",
-        completed: false,
-      },
-      {
-        date: "2025-01-31",
-        title: "Project Completion",
-        description: "Final testing and handover",
-        completed: false,
-      },
+      { date: "2023-06-10", title: "Project Kickoff", description: "Collaboration with AI-based traffic monitoring firms", completed: true },
+      { date: "2023-12-05", title: "Pilot Phase", description: "Testing AI-controlled traffic signals in Connaught Place", completed: true },
+      { date: "2024-08-15", title: "Phase 1 Implementation", description: "Expansion to major intersections", completed: false },
+      { date: "2025-01-30", title: "Public Awareness Campaign", description: "Educating commuters about the new system", completed: false },
+      { date: "2025-10-20", title: "Citywide Integration", description: "Integration with emergency and public transport systems", completed: false },
+      { date: "2026-03-31", title: "Final Rollout", description: "Full implementation across Delhi", completed: false },
     ],
   },
   {
     id: "PRJ-003",
-    name: "Public Library Expansion",
-    department: "Education",
-    startDate: "2022-09-05",
-    endDate: "2023-08-15",
+    name: "Ganga River Cleaning Project",
+    department: "Environmental Affairs",
+    startDate: "2022-05-01",
+    endDate: "2024-12-31",
     status: "Completed",
     milestones: [
-      {
-        date: "2022-09-05",
-        title: "Project Launch",
-        description: "Groundbreaking ceremony and initial construction",
-        completed: true,
-      },
-      {
-        date: "2022-11-20",
-        title: "Foundation Completion",
-        description: "Structural foundation work completed",
-        completed: true,
-      },
-      {
-        date: "2023-02-10",
-        title: "Building Exterior",
-        description: "Exterior walls and roofing completed",
-        completed: true,
-      },
-      {
-        date: "2023-04-30",
-        title: "Interior Construction",
-        description: "Interior walls, electrical, and plumbing completed",
-        completed: true,
-      },
-      {
-        date: "2023-06-25",
-        title: "Furnishing and Equipment",
-        description: "Installation of shelving, furniture, and technology",
-        completed: true,
-      },
-      {
-        date: "2023-08-15",
-        title: "Grand Opening",
-        description: "Ribbon cutting ceremony and public opening",
-        completed: true,
-      },
+      { date: "2022-05-01", title: "Project Initiation", description: "Formation of Namami Gange task force", completed: true },
+      { date: "2022-10-15", title: "Sewage Treatment Plants", description: "Construction of 15 new STPs", completed: true },
+      { date: "2023-03-10", title: "Industrial Waste Regulations", description: "Stricter pollution control policies", completed: true },
+      { date: "2023-08-25", title: "Community Awareness", description: "Workshops in cities along the Ganga", completed: true },
+      { date: "2024-06-10", title: "Final Water Quality Check", description: "Improved water quality reports", completed: true },
+      { date: "2024-12-31", title: "Project Closure", description: "Evaluation and final report submission", completed: true },
     ],
   },
 ]
@@ -198,11 +108,7 @@ export function ProjectsTimeline() {
                   {project.status}
                 </span>
                 <Button variant="ghost" size="sm" onClick={() => toggleExpand(project.id)}>
-                  {expandedProject === project.id ? (
-                    <ChevronUp className="h-4 w-4" />
-                  ) : (
-                    <ChevronDown className="h-4 w-4" />
-                  )}
+                  {expandedProject === project.id ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
                 </Button>
               </div>
             </div>
@@ -214,9 +120,7 @@ export function ProjectsTimeline() {
                     <div key={index} className="relative">
                       <div
                         className={`absolute left-[-24px] top-0 h-6 w-6 rounded-full border-4 ${
-                          milestone.completed
-                            ? "border-primary bg-primary-foreground"
-                            : "border-muted-foreground bg-background"
+                          milestone.completed ? "border-primary bg-primary-foreground" : "border-muted-foreground bg-background"
                         }`}
                       />
                       <div className="space-y-1">
@@ -239,4 +143,3 @@ export function ProjectsTimeline() {
     </div>
   )
 }
-
